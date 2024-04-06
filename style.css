@@ -9,7 +9,6 @@
     --content: 'Quicksand';
 
     --gray: #9b9b9b;
-
 };
 
 body {
@@ -18,16 +17,39 @@ body {
 .content-wraper{
     margin-left: 9em;
 }
-.social-nav {
+/* ? NAVABR */
+.navbar {
     display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
-    margin: 1em;
     height: 100vh;
+    margin: 0 1em;
     position: fixed;
-    z-index: 1;
     padding: 1em;
+    z-index: 1;
+    /* background-color: rgba(0, 255, 255, 0.288); */
 }
-.social-nav li {
+.navbar .links li{
+    padding: 0.5em 0;
+    list-style: none;
+    color: #000;
+    font-family: var(--heading);
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.navbar .links a{
+    transition: 0.2s ease;
+    text-decoration: none;
+    color: #000;
+}
+.navbar .links li:hover a,a:visited {
+    color: var(--gray);
+}
+.navbar .social-links {
+    margin-top: 8em;
+}
+.navbar .social-links li {
     padding: 0.5em;
     list-style: none;
     margin: 2em 0;
@@ -35,15 +57,15 @@ body {
     color: var(--gray);
     transition: 0.2s ease-in-out;
 }
-.social-nav li:hover {
+.navbar .social-links li:hover {
     border-radius: 0.2em;
     cursor: pointer;
     color: #000;
 }
-.social-nav span{
+.navbar .social-links span{
     text-transform: lowercase;
     color: #000;
-    margin: 0em 1.2em;
+    margin: 0em 1.3em;
     font-size: 0.8em;
     visibility: hidden;
     opacity: 0;
@@ -51,7 +73,7 @@ body {
     position: absolute;
     transition: .2s ease;
 }
-.social-nav li:hover span{
+.navbar .social-links li:hover span{
     border-radius: .2em;
     visibility: visible;
     opacity: 1;
@@ -59,13 +81,14 @@ body {
     transform: translateX(10%);
 
 }
-.social-nav a, a:visited {
+.navbar .social-links a:visited, a {
     color: var(--gray);
 }
-.social-nav li:hover a, a:visited{
+.navbar .social-links li:hover a, a:visited{
     color: #000000;
 }
 p {
-    font-size: 100px;
+    font-size: 1em;
     font-family: var(--content);
+
 }
