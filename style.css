@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: #ffffff;
+}
+.navbar {
+    flex: 1;
+    /* display: flex; */
+    align-items: center;
+    margin: 6em 2em;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    /* background-color: red; */
+    padding: 1em;
+}
+.content-wraper{
+    /* background-color: aqua; */
+    /* flex:; */
+    margin-left: 9em;
+}
+.navbar li {
+    list-style: none;
+    margin: 2em 0;
+    font-size: 2em;
+    color: #636363;
+    transition: 0.2s ease-in-out;
+}
+.navbar li:hover {
+    cursor: pointer;
+    /* font-size: 2.5em; */
+    color: #000;
+}
+p {
+    font-size: 100px;
+}
