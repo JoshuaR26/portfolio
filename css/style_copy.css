@@ -86,7 +86,6 @@ p {
   visibility: hidden;
   opacity: 0;
   font-family: "Quicksand";
-  font-weight: 600;
   position: absolute;
   transition: 0.4s ease;
 }
@@ -164,19 +163,15 @@ p {
   align-items: center;
   height: auto;
   width: 30em;
+  padding: 2em 0;
   overflow: hidden;
   filter: grayscale(1);
   transition: 0.3s ease;
 }
 .project img {
-  padding: 1em 0;
   margin: auto;
   width: 80%;
   text-align: center;
-  transition: 0.5s ease;
-}
-.project:hover img {
-  width: 82%;
 }
 .project button {
   visibility: hidden;
