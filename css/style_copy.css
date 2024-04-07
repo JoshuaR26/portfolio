@@ -169,9 +169,14 @@ p {
   transition: 0.3s ease;
 }
 .project img {
+  padding: 2em 0;
   margin: auto;
   width: 80%;
   text-align: center;
+  transition: 0.4s ease;
+}
+.project:hover img {
+  width: 82%;
 }
 .project button {
   visibility: hidden;
