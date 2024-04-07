@@ -81,7 +81,8 @@ p {
         margin: 2em 0;
         font-size: 1.5em;
         color: #000;
-        transition: 0.2s ease-in-out;
+        transition: 0.5s ease-in-out;
+        transition: 0.3s ease;
 
         span {
             text-transform: lowercase;
@@ -92,7 +93,7 @@ p {
             opacity: 0;
             font-family: $content;
             position: absolute;
-            transition: .2s ease;
+            transition: 0.4s ease;
         }
 
         &:hover {
@@ -111,6 +112,7 @@ p {
 
         a:visited, a {
             color: #000;
+            transition: 0.3s ease;
         }
 
         &:hover a, &:hover a:visited {
@@ -137,8 +139,18 @@ p {
         font-size: 4em;
     }
 }
-.hero .hero-img img{
-    height: 600px;
+.hero .hero-img{
+    transition: 0.3s ease;
+    img {
+        // transition: opacity 1s ease;
+        height: 600px;
+    }
+    &:hover {
+        // filter: grayscale(1);
+        // filter: grayscale();
+        transform: translateY(-3%);
+    }
+        
 }
 // #endregion
 
@@ -151,7 +163,7 @@ p {
     flex-direction: column;
     text-align: justify;
     width: 70%;
-    padding-bottom: 10em;
+    // padding-bottom: 10em;
   
 }
 .content {
@@ -159,6 +171,86 @@ p {
 }
 // #endregion
 
+// #region WORK
+.project-wrapper {
+    // background-color: aqua;
+    // padding: 2em;
+    // margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15em;
+    width: 30em;
+    background-color: #fff;
+    overflow: hidden;
+    filter: grayscale(1);
+    // border: #FF9800 solid 10px;
+    transition: 0.3s ease;
+
+    img {
+        margin: auto;
+        width: 80%;
+        text-align: center;
+    }
+    button {
+        visibility: hidden;
+        
+        width: 100%;
+        padding: 0.5em 1em;
+        cursor: pointer;
+
+        font-family: $content;
+        font-weight: 600;
+        color: #fff;
+        font-size: 1.1em;
+        text-align: center;
+        
+        background-color: #000;
+        border: none;
+        border-radius: 1.5em;
+
+        border: #000 solid 3px;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+    button:hover {
+        background-color: transparent;
+        color: #000;
+        border: $orange solid 3px;
+    }
+    &:hover {
+        filter: grayscale(0);
+    }
+    &:hover button{
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+// #endregion
+
+// #region FOOTER
+.footer {
+    margin-top: 10em;
+    width: 100%;
+    // padding: 3em;
+    text-align: center;
+    footer {
+        font-family: $content;
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+// #endregion
 // MOBILE 768PX
 @media screen and (max-width: 768px) {
     body {

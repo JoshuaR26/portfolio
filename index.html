@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style_copy.css">
+    <script defer src="./js/app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="icon" href="./images/icon2.png">
@@ -24,7 +25,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#">Work</a>
+                        <a href="#work">Work</a>
                     </li>
                 </ul>
             </div>
@@ -72,7 +73,7 @@
                 <h1>I'm <span style="color: #ff9800;">Joshua Raju</span></h1>
             </div>
             <div class="hero-img">
-                <img src="./images/home.png">
+                <img id="home-img" onmouseover="setNewImg()" onmouseout="setOldImg()" src="./images/home_bw.png">
             </div>
         </div>
 
@@ -87,6 +88,39 @@
                 In essence, I'm a curious soul with a penchant for innovation and a deep appreciation for both the technical and the creative. I'm always eager to learn, explore, and embrace new challenges, both in the world of technology and beyond. So, if you're ever up for a chat about AI, frontend development, or the latest art trends, feel free to reach out - I'm always open to new connections and exciting opportunities!
             </p>            
         </div>
+        
+        <!--? WORK -->
+        <div class="work" id="work">
+            <h1>work</h1>
+            <div class="project-wrapper">
+                <div class="project">
+                    <img src="./images/cloud_rescue.png">
+                    <a href="https://github.com/RiddhimanRaguraman/CloudsRescue" target="_blank">
+                        <button type="button" >github</button>
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="./images/smile.png">
+                    <a href="https://github.com/JoshuaR26/sMile" target="_blank">
+                        <button type="button" >github</button>
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="./images/trustorch.png">
+                    <a href="https://github.com/JoshuaR26/TrusTorch.Ext" target="_blank">
+                        <button type="button" >github</button>
+                    </a>
+                </div>
+                <div class="project">
+                    <img src="./images/learn_bridge.png">
+                    <a href="https://github.com/JoshuaR26/LearnBridge" target="_blank">
+                        <button type="button" >github</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ? FOOTER -->
         <div class="footer">
             <hr>
             <footer>
