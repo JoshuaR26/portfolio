@@ -133,12 +133,12 @@ p {
 // #region CONTENT 
 .content-wrapper {
     margin: auto;
-    margin-left: 2em;
+    margin-left: 0 3em;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: justify;
-    width: 70%;
+    width: 85%;
     padding-bottom: 10em;
   
 }
@@ -149,16 +149,19 @@ p {
 
 // MOBILE 768PX
 @media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
     .navbar {
-        visibility:visible;
+        visibility:hidden;
         height: 50px;
         flex-direction: row;
         width: 100%;
         bottom: 0;
     }
     .content-wrapper {
-        margin: auto;
-        width: 90%;
+        width: 100%;
     }
     .hero {
         margin-right:0 3em;
