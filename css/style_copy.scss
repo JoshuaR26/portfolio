@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 $heading: 'Outfit';
@@ -14,10 +15,10 @@ $orange: #FF9800;
 // #endregion
 
 ::-webkit-scrollbar{
-    width: 15px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track{
-    background-color: #000;
+    background-color: #000000;
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 0.2em;
@@ -29,7 +30,7 @@ body {
 h1 {
     font-family: $heading;
     text-transform: lowercase;
-    // font-size: 6em;
+    font-size: 5em;
 } 
 p {
     font-size: 1.5rem;
@@ -140,17 +141,9 @@ p {
     }
 }
 .hero .hero-img{
-    transition: 0.3s ease;
     img {
-        // transition: opacity 1s ease;
         height: 600px;
     }
-    &:hover {
-        // filter: grayscale(1);
-        // filter: grayscale();
-        transform: translateY(-3%);
-    }
-        
 }
 // #endregion
 
@@ -172,6 +165,13 @@ p {
 // #endregion
 
 //? #region WORK
+.work {
+    margin-top: 10em;
+    h1 {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
 .project-wrapper {
     // background-color: aqua;
     // padding: 2em;
@@ -186,21 +186,23 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 15em;
+    height: auto;
     width: 30em;
-    background-color: #fff;
+    padding: 2em 0;
+    // background-color: #9e4444;
     overflow: hidden;
     filter: grayscale(1);
     transition: 0.3s ease;
 
     img {
+        // height: ;
         margin: auto;
         width: 80%;
         text-align: center;
     }
     button {
         visibility: hidden;
-        
+        // bottom: 0;
         width: 100%;
         padding: 0.5em 1em;
         cursor: pointer;

@@ -1,3 +1,12 @@
+const splash = document.querySelector('.splash');
+
+document.addEventListener('DOMContentLoaded', (e) =>{
+    setTimeout(()=> {
+        splash.classList.add('display-none');
+    }, 2000);
+})
+
+
 function setNewImg() {
     var img = document.getElementById('home-img');
     img.src = '../images/home.png';
