@@ -1,7 +1,9 @@
 // ! #region IMPORTS
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap');
 
-// @import './_navbar';
+$heading: 'Outfit';
+$content: 'Quicksand';
+$orange: #FF9800;
 
 * {
     margin: 0;
@@ -9,9 +11,8 @@
     scroll-behavior: smooth;
 }
 
-$heading: 'Outfit';
-$content: 'Quicksand';
-$orange: #FF9800;
+@import './_navbar.scss';
+
 // #endregion
 
 ::-webkit-scrollbar{
@@ -39,98 +40,17 @@ p {
 }
 
 //? #region NAVBAR
-.navbar{
-    display: flex;
-    flex-direction: row;
-    // top: 0;
-    text-align: center;
-    align-items: center;
-    height: 85vh;
-    margin: 0 1em;
-    position: fixed;
-    padding: 1em;
-    z-index: 1;
-    // background-color: rgba(0, 255, 255, 0.288);
-}
-
-.navbar .links li {
-    padding: 0.5em 0;
-    list-style: none;
-    color: #000;
-    font-family: $heading;
-    font-size: 1em;
-    text-transform: uppercase;
-    &:hover {
-        font-weight: 600;
-    }
-    a {
-        transition: 0.2s ease;
-        text-decoration: none;
-        color: #000;
-    }
-
-    &:hover a, &:hover a:visited {
-        color: $orange;
-    }
-}
-.navbar .social-links {
-    margin-top: 8em;
-
-    li {
-        padding: 0.5em;
-        list-style: none;
-        margin: 2em 0;
-        font-size: 1.5em;
-        color: #000;
-        transition: 0.5s ease-in-out;
-        transition: 0.3s ease;
-
-        span {
-            text-transform: lowercase;
-            color: $orange;
-            margin: 0em 1.3em;
-            font-size: 0.8em;
-            visibility: hidden;
-            opacity: 0;
-            font-family: $content;
-            position: absolute;
-            transition: 0.4s ease;
-        }
-
-        &:hover {
-            border-radius: 0.2em;
-            cursor: pointer;
-            color: $orange;
-
-            span {
-                border-radius: .2em;
-                visibility: visible;
-                opacity: 1;
-                cursor: pointer;
-                transform: translateX(10%);
-            }
-        }
-
-        a:visited, a {
-            color: #000;
-            transition: 0.3s ease;
-        }
-
-        &:hover a, &:hover a:visited {
-            color: $orange;
-        }
-    }
-}
 
 // #endregion
 
-//? #region HERO
+// #region HERO
 .hero {
-    margin-top: 3em;
+    margin: 3em 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 .hero .hero-text{
     h1 {
@@ -147,7 +67,7 @@ p {
 }
 // #endregion
 
-//? #region CONTENT 
+// #region CONTENT 
 .content-wrapper {
     margin: auto;
     // margin-left: 0 3em;
@@ -164,7 +84,7 @@ p {
 }
 // #endregion
 
-//? #region WORK
+// #region PROJECT
 .work {
     margin-top: 10em;
     h1 {
@@ -173,14 +93,12 @@ p {
     }
 }
 .project-wrapper {
-    // background-color: aqua;
-    // padding: 2em;
-    // margin: 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 1em;
 }
+// #region
 .project {
     display: flex;
     flex-direction: column;
@@ -189,7 +107,6 @@ p {
     height: auto;
     width: 30em;
     padding: 2em 0;
-    // background-color: #9e4444;
     overflow: hidden;
     filter: grayscale(1);
     transition: 0.3s ease;
@@ -206,7 +123,6 @@ p {
     }
     button {
         visibility: hidden;
-        // bottom: 0;
         width: 100%;
         padding: 0.5em 1em;
         cursor: pointer;
@@ -237,7 +153,6 @@ p {
         opacity: 1;
         visibility: visible;
     }
-
 }
 // #endregion
 
@@ -256,24 +171,41 @@ p {
     }
 }
 // #endregion
+
 // MOBILE 768PX
 @media screen and (max-width: 768px) {
     body {
-        margin: 0;
+        margin: 0 2em ;
+        margin-bottom: 5em;
         padding: 0;
-    }
-    .navbar {
-        visibility:hidden;
-        height: 50px;
-        flex-direction: row;
-        width: 100%;
-        bottom: 0;
     }
     .content-wrapper {
         width: 100%;
     }
     .hero {
         margin-right:0 3em;
+    }
+}
+
+// 425PX
+@media screen and (max-width: 590px) {
+    * {
+        // margin: 0;
+        // margin: auto auto;
+        padding: 0;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    .content-wrapper {
+        width: 100vw;
+    }
+    .hero .hero-text{
+        font-size: 0.6em;
+        margin-bottom: 5em;
+    }
+    .hero .hero-img{
+        display: none;
     }
 }
 

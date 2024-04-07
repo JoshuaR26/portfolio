@@ -1,0 +1,130 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    height: 85vh;
+    margin: 0 1em;
+    position: fixed;
+    padding: 1em;
+    z-index: 1;
+}
+.navbar .links li {
+    padding: 0.5em 0;
+    list-style: none;
+    color: #000;
+    font-family: $heading;
+    font-size: 1em;
+    text-transform: uppercase;
+    &:hover {
+        font-weight: 600;
+    }
+    a {
+        transition: 0.2s ease;
+        text-decoration: none;
+        color: #000;
+    }
+
+    &:hover a, &:hover a:visited {
+        color: $orange;
+    }
+}
+.navbar .social-links {
+    margin-top: 8em;
+
+    li {
+        padding: 0.5em;
+        list-style: none;
+        margin: 2em 0;
+        font-size: 1.5em;
+        color: #000;
+        transition: 0.5s ease-in-out;
+        transition: 0.3s ease;
+
+        span {
+            text-transform: lowercase;
+            color: $orange;
+            margin: 0em 1.3em;
+            font-size: 0.8em;
+            visibility: hidden;
+            opacity: 0;
+            font-family: $content;
+            position: absolute;
+            transition: 0.4s ease;
+        }
+
+        &:hover {
+            border-radius: 0.2em;
+            cursor: pointer;
+            color: $orange;
+
+            span {
+                border-radius: .2em;
+                visibility: visible;
+                opacity: 1;
+                cursor: pointer;
+                transform: translateX(10%);
+            }
+        }
+
+        a:visited, a {
+            color: #000;
+            transition: 0.3s ease;
+        }
+
+        &:hover a, &:hover a:visited {
+            color: $orange;
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .navbar {
+        bottom: 0;
+        right: 0;
+        background-color: $orange;
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        margin: auto;
+        padding: 0.5em 0;
+        box-shadow: 0 0 5px rgba(0,0,0,0.25);
+        nav {
+            margin: 1em;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        span {
+            display: none;
+        }
+    }
+    .navbar .links{
+        display: none;
+    }
+    .navbar .social-links{
+        margin: auto;
+        width: 100%;
+        ul {
+            // background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+        li {
+            font-size: 2em;
+            padding: 0;
+            margin: 0;
+            a:visited, a {
+                color: #000;
+                transition: 0.3s ease;
+            }
+    
+            &:hover a, &:hover a:visited {
+                color: #000;
+            }
+        }
+    }
+}

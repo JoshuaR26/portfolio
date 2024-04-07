@@ -5,35 +5,6 @@
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #000000;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 0.2em;
-  background-color: #FF9800;
-}
-
-body {
-  background-color: #fff;
-}
-
-h1 {
-  font-family: "Outfit";
-  text-transform: lowercase;
-  font-size: 5em;
-}
-
-p {
-  font-size: 1.5rem;
-  font-family: "Quicksand";
-  font-weight: 500;
-}
-
 .navbar {
   display: flex;
   flex-direction: row;
@@ -109,12 +80,90 @@ p {
   color: #FF9800;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar {
+    bottom: 0;
+    right: 0;
+    background-color: #FF9800;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    margin: auto;
+    padding: 0.5em 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  }
+  .navbar nav {
+    margin: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar span {
+    display: none;
+  }
+  .navbar .links {
+    display: none;
+  }
+  .navbar .social-links {
+    margin: auto;
+    width: 100%;
+  }
+  .navbar .social-links ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .navbar .social-links li {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar .social-links li a:visited, .navbar .social-links li a {
+    color: #000;
+    transition: 0.3s ease;
+  }
+  .navbar .social-links li:hover a, .navbar .social-links li:hover a:visited {
+    color: #000;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.2em;
+  background-color: #FF9800;
+}
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  font-family: "Outfit";
+  text-transform: lowercase;
+  font-size: 5em;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  font-weight: 500;
+}
+
 .hero {
-  margin-top: 3em;
+  margin: 3em 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .hero .hero-text h1 {
@@ -223,20 +272,32 @@ p {
 
 @media screen and (max-width: 768px) {
   body {
-    margin: 0;
+    margin: 0 2em;
+    margin-bottom: 5em;
     padding: 0;
-  }
-  .navbar {
-    visibility: hidden;
-    height: 50px;
-    flex-direction: row;
-    width: 100%;
-    bottom: 0;
   }
   .content-wrapper {
     width: 100%;
   }
   .hero {
     margin-right: 0 3em;
+  }
+}
+@media screen and (max-width: 590px) {
+  * {
+    padding: 0;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  .content-wrapper {
+    width: 100vw;
+  }
+  .hero .hero-text {
+    font-size: 0.6em;
+    margin-bottom: 5em;
+  }
+  .hero .hero-img {
+    display: none;
   }
 }/*# sourceMappingURL=style_copy.css.map */
