@@ -8,9 +8,19 @@ body {
   background-color: #fff;
 }
 
+h1 {
+  font-family: "Outfit";
+  text-transform: lowercase;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: "Quicksand";
+  font-weight: 500;
+}
+
 .navbar {
   display: flex;
-  flex-direction: column;
   text-align: center;
   align-items: center;
   height: 100vh;
@@ -34,7 +44,7 @@ body {
   color: #000;
 }
 .navbar .links li:hover a, .navbar .links li:hover a:visited {
-  color: #fa7e03;
+  color: #FF9800;
 }
 
 .navbar .social-links {
@@ -45,12 +55,12 @@ body {
   list-style: none;
   margin: 2em 0;
   font-size: 1.5em;
-  color: #fa7e03;
+  color: #000;
   transition: 0.2s ease-in-out;
 }
 .navbar .social-links li span {
   text-transform: lowercase;
-  color: #000;
+  color: #FF9800;
   margin: 0em 1.3em;
   font-size: 0.8em;
   visibility: hidden;
@@ -62,7 +72,7 @@ body {
 .navbar .social-links li:hover {
   border-radius: 0.2em;
   cursor: pointer;
-  color: #000;
+  color: #FF9800;
 }
 .navbar .social-links li:hover span {
   border-radius: 0.2em;
@@ -72,37 +82,59 @@ body {
   transform: translateX(10%);
 }
 .navbar .social-links li a:visited, .navbar .social-links li a {
-  color: #fa7e03;
-}
-.navbar .social-links li:hover a, .navbar .social-links li:hover a:visited {
   color: #000;
 }
+.navbar .social-links li:hover a, .navbar .social-links li:hover a:visited {
+  color: #FF9800;
+}
 
-.content-wraper {
+.hero {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero .hero-text h1 {
+  font-size: 5em;
+}
+.hero .hero-text #hello {
+  font-size: 4em;
+}
+
+.hero .hero-img img {
+  height: 600px;
+}
+
+.content-wrapper {
   margin: auto;
+  margin-left: 2em;
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: justify;
-  width: 60%;
+  width: 70%;
   padding-bottom: 10em;
 }
-.content-wraper h1 {
-  font-family: "Outfit";
-  text-transform: lowercase;
-  font-size: 6em;
-  margin: 2rem 0;
-}
-.content-wraper p {
-  font-size: 1.5rem;
-  font-family: "Quicksand";
+
+.content {
+  margin: 3em 0;
 }
 
-.content-wraper .about {
-  display: flex;
-  padding: 5em;
-}
-.content-wraper .about img {
-  height: 30rem;
-  position: sticky;
+@media screen and (max-width: 768px) {
+  .navbar {
+    visibility: visible;
+    height: 50px;
+    flex-direction: row;
+    width: 100%;
+    bottom: 0;
+  }
+  .content-wrapper {
+    margin: auto;
+    width: 90%;
+  }
+  .hero {
+    margin-right: 0 3em;
+  }
 }/*# sourceMappingURL=style_copy.css.map */
