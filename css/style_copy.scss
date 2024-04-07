@@ -93,6 +93,7 @@ p {
             visibility: hidden;
             opacity: 0;
             font-family: $content;
+            font-weight: 600;
             position: absolute;
             transition: 0.4s ease;
         }
@@ -188,17 +189,21 @@ p {
     align-items: center;
     height: auto;
     width: 30em;
-    padding: 2em 0;
     // background-color: #9e4444;
     overflow: hidden;
     filter: grayscale(1);
     transition: 0.3s ease;
-
+    
     img {
         // height: ;
+        padding: 1em 0;
         margin: auto;
         width: 80%;
         text-align: center;
+        transition: 0.5s ease;
+    }
+    &:hover img {
+        width: 82%;
     }
     button {
         visibility: hidden;
