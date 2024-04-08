@@ -1,16 +1,20 @@
 .navbar {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    height: 85vh;
-    margin: 0 1em;
+    margin: 1em 1em;
     position: fixed;
-    padding: 1em;
     z-index: 1;
     animation: nav-load 1s ease 3s;
     opacity: 0;
     animation-fill-mode: forwards;
+    nav {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.navbar .links {
+    text-align: center;
+    top: 0;
 }
 .navbar .links li {
     padding: 0.5em 0;
@@ -87,14 +91,18 @@
         right: 0;
         background-color: $orange;
         width: 100%;
-        height: 50px;
+        height: auto;
         position: fixed;
         margin: auto;
-        padding: 0.5em 0;
+        // padding: 0.5em 0;
         box-shadow: 0 0 5px rgba(0,0,0,0.25);
+        animation: nav-load-2 0.6s ease 2.5s;
+        opacity: 1;
+        transform: translateY(100%);
+        animation-fill-mode: forwards;
         nav {
-            margin: 1em;
-            width: 100%;
+            margin: 0.8em;
+            height: auto;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -139,6 +147,14 @@
     }
     100% {
         opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes nav-load-2 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
         transform: translateX(0);
     }
 }

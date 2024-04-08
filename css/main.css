@@ -6,18 +6,23 @@
 }
 
 .navbar {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  height: 85vh;
-  margin: 0 1em;
+  margin: 1em 1em;
   position: fixed;
-  padding: 1em;
   z-index: 1;
   animation: nav-load 1s ease 3s;
   opacity: 0;
   animation-fill-mode: forwards;
+}
+.navbar nav {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar .links {
+  text-align: center;
+  top: 0;
 }
 
 .navbar .links li {
@@ -89,15 +94,18 @@
     right: 0;
     background-color: #FF9800;
     width: 100%;
-    height: 50px;
+    height: auto;
     position: fixed;
     margin: auto;
-    padding: 0.5em 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    animation: nav-load-2 0.6s ease 2.5s;
+    opacity: 1;
+    transform: translateY(100%);
+    animation-fill-mode: forwards;
   }
   .navbar nav {
-    margin: 1em;
-    width: 100%;
+    margin: 0.8em;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -141,6 +149,14 @@
     transform: translateX(0);
   }
 }
+@keyframes nav-load-2 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -162,7 +178,7 @@ h1 {
   font-family: "Outfit";
   text-transform: lowercase;
   font-size: 5em;
-  animation: load 1s ease 2s;
+  animation: load 1s ease 2.2s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -177,24 +193,26 @@ p {
 }
 
 .hero {
-  margin: 1em 0;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .hero .hero-text h1 {
-  font-size: 5em;
+  font-size: 3em;
 }
-.hero .hero-text #hello {
-  font-size: 4em;
+.hero .hero-text span {
+  font-size: 1.8em;
 }
 
 .hero .hero-img img {
-  height: 600px;
-  animation: load 1s ease 2.5s;
+  min-width: 50px;
+  max-width: 650px;
+  animation: load 1s ease 2.8s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -305,7 +323,7 @@ p {
     width: 100%;
   }
   .hero {
-    margin-right: 0 3em;
+    margin: 5em 3em;
   }
 }
 @media screen and (max-width: 590px) {
@@ -314,6 +332,9 @@ p {
   }
   .content-wrapper {
     width: 100vw;
+  }
+  .hero {
+    margin-top: 5em;
   }
   .hero .hero-text {
     font-size: 0.6em;

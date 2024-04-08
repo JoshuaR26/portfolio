@@ -32,7 +32,7 @@ h1 {
     font-family: $heading;
     text-transform: lowercase;
     font-size: 5em;
-    animation: load 1s ease 2s;
+    animation: load 1s ease 2.2s;
     animation-fill-mode: forwards;
     opacity: 0;
 } 
@@ -47,25 +47,29 @@ p {
 }
 
 .hero {
-    margin: 1em 0;
+    // background-color: aqua;
+    // margin: 10em 0;
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .hero .hero-text{
     h1 {
-        font-size: 5em;
+        font-size: 3em;
     }
-    #hello {
-        font-size: 4em;
+    span {
+        font-size: 1.8em;
     }
 }
 .hero .hero-img{
     img {
-        height: 600px;    
-        animation: load 1s ease 2.5s;
+        min-width: 50px;
+        max-width: 650px;  
+        animation: load 1s ease 2.8s;
         animation-fill-mode: forwards;
         opacity: 0;
     }
@@ -73,7 +77,7 @@ p {
 
 .content-wrapper {
     margin: auto;
-    // margin-left: 0 3em;
+    // margin-top: 10em;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -181,7 +185,7 @@ p {
         width: 100%;
     }
     .hero {
-        margin-right:0 3em;
+        margin:5em 3em;
     }
 }
 
@@ -192,6 +196,10 @@ p {
     }
     .content-wrapper {
         width: 100vw;
+    }
+    .hero {
+        margin-top: 5em;
+        // height: auto;
     }
     .hero .hero-text{
         font-size: 0.6em;
