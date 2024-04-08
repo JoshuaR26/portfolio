@@ -193,13 +193,14 @@ p {
 }
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  box-sizing: border-box;
 }
 
 .hero .hero-text h1 {
@@ -210,8 +211,7 @@ p {
 }
 
 .hero .hero-img img {
-  min-width: 50px;
-  max-width: 650px;
+  width: 650px;
   animation: load 1s ease 2.8s;
   animation-fill-mode: forwards;
   opacity: 0;
